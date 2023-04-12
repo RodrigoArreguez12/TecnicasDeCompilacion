@@ -48,6 +48,14 @@ instrucciones : instruccion instrucciones
               |
               ;
 
-intruccion : asignacion ;
+intruccion : asignacion
+           | declaracion
+           ;
 
 asignacion : ID ASSIGN NUMERO PYC;
+
+declaracion : INT ID inicializacion PYC ;
+
+inicializacion : ASSIGN NUMERO
+               |
+               ;
